@@ -14,7 +14,7 @@
   service: ansible
   command: env
 
-- name: debug_git
+- name: git_manual_clone
   service: ansible
   command: git clone git@github.com:rosstimson/tdd-ansible-ruby-role.git
 
