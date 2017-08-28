@@ -6,13 +6,13 @@
   service: ansible
   command: env
 
-- name: debug_git
+- name: debug_ssh
   service: ansible
-  command: ssh -o StrictHostKeyChecking=no -T git@github.com
+  command: ssh -o StrictHostKeyChecking=no -T git@github.com -vvvv
 
 - name: add_github_to_known_hosts
   service: ansible
-  command: ls -lah ~/.ssh && ssh-keyscan -t rsa github.com > ~/.ssh/known_hosts
+  command: ssh-keyscan -t rsa github.com > ~/.ssh/known_hosts
 
 - name: git_manual_clone
   service: ansible
