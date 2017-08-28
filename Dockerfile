@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk add --update ansible xz
+RUN apk add --update ansible git xz
 
 RUN mkdir -p /ansible/roles
 WORKDIR /ansible
