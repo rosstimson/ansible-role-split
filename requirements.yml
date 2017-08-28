@@ -1,0 +1,5 @@
+- src: git@github.com:rosstimson/tdd-ansible-ruby-role.git
+  path: roles
+  scm: git
+  version: master
+  name: ruby

@@ -1,0 +1,5 @@
+ansible:
+  # encrypted_env_file: packer.env.encrypted
+  build:
+    image: rosstimson/ansible
+    dockerfile_path: Dockerfile
