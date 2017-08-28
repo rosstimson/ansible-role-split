@@ -1,3 +1,7 @@
+- name: show_me_working_dir
+  service: ansible
+  command: ls -lah
+
 - name: ansible_get_deps
   service: ansible
-  command: ansible-galaxy install -vvvv -r requirements.yml --roles-path ./roles
+  command: ansible-galaxy install -r requirements.yml --roles-path ./roles -vvvv
