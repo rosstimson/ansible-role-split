@@ -4,6 +4,18 @@
 
 - name: debug_git
   service: ansible
+  command: ssh -o StrictHostKeyChecking=no -T git@github.com
+
+- name: add_github_to_known_hosts
+  service: ansible
+  command: ls -lah ~/.ssh && ssh-keyscan -t rsa github.com > ~/.ssh/known_hosts
+
+- name: show_me_env
+  service: ansible
+  command: env
+
+- name: debug_git
+  service: ansible
   command: git clone git@github.com:rosstimson/tdd-ansible-ruby-role.git
 
 - name: ansible_get_deps
