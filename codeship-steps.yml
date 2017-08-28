@@ -2,6 +2,10 @@
   service: ansible
   command: ls -lah
 
+- name: debug_git
+  service: ansible
+  command: git clone git@github.com:rosstimson/tdd-ansible-ruby-role.git
+
 - name: ansible_get_deps
   service: ansible
   command: ansible-galaxy install -r requirements.yml --roles-path ./roles -vvvv
